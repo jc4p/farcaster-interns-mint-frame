@@ -241,7 +241,7 @@ export function MintForm() {
       }
       
       // Contract details
-      const contractAddress = '0x6b65C9aE28c4201695A1046cC03ce4D5689E18C1';
+      const contractAddress = '0x4c8574512C09f0dCa20A37aB24447a2e1C10f223';
       console.log('[MintForm] Contract address:', contractAddress);
       
       if (mintType === 'free') {

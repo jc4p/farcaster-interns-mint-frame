@@ -11,7 +11,9 @@ export async function POST(req) {
       body: JSON.stringify(body),
     });
     if (!scatterRes.ok) {
-      return NextResponse.json({ error: 'Scatter API error' }, { status: 500 });
+      const errorData = await scatterRes.text()
+      console.error('Scatter API error:', errorData);
+      return NextResponse.json({ error: errorData }, { status: 500 });
     }
     const data = await scatterRes.json();
     return NextResponse.json(data.mintTransaction);
